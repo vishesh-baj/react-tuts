@@ -1,1 +1,32 @@
-components - reusable chunk of code , and allows us to seperate our concerns
+components - reusable chunk of code , and allows us to seperate our concerns, executes same code multiple times, spliy big chunk of code into multiple smaller functions
+
+__________________________________
+How is component built ?
+user interfacers is about html css and js, componentys combine all these three and then we combine the components together to make user interfaces, (css is optional)
+or
+react allows you to create re-usable and reactive components consisting of HTML and Javascript (and css)
+__________________________________
+React uses declarative approach to make components 
+Define the desited target state(s) and let React figure out the actual js DOM instructions 
+
+__________________________________
+
+We cannot import css to javascript file in vanilla js
+
+
+
+__________________________________
+index.js is the first file that gets executed
+
+__________________________________
+App is a component, here all the other components will be rendered 
+
+__________________________________
+JSX(javascript xml) - special syntax to add html to javascript
+
+
+__________________________________
+in react we build component trees 
+components in react are just js functions
+one root element per jsx code snippet is must
+
