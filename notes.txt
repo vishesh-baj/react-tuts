@@ -1,0 +1,1 @@
+components - reusable chunk of code , and allows us to seperate our concerns
