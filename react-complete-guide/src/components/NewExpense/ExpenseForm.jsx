@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./ExpenseForm.css";
-const ExpenseForm = () => {
+const ExpenseForm = ({ onSaveExpenseData }) => {
   const [enteredInput, setEnteredInput] = useState({
     title: "",
     amount: "",
@@ -8,12 +8,21 @@ const ExpenseForm = () => {
   });
 
   const handleChange = (e) => {
-    setEnteredInput({ ...enteredInput, [e.target.name]: e.target.value });
+    //  proper approach when new state is depended on the previous state
+    setEnteredInput((prevState) => {
+      return { ...prevState, [e.target.name]: e.target.value };
+    });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(enteredInput);
+    const expenseData = {
+      title: enteredInput.title,
+      amount: enteredInput.amount,
+      date: new Date(enteredInput.date),
+    };
+    onSaveExpenseData(expenseData);
+    setEnteredInput({ title: "", amount: "", date: "" });
   };
 
   return (
